@@ -25,7 +25,7 @@ class MainViewModel : ViewModel() {
         fetchSchools()
     }
 
-    private fun fetchSchools() {
+     fun fetchSchools() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val schoolsData: List<SchoolData> = service.getSchools()
